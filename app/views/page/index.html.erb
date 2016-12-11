@@ -1,0 +1,13 @@
+<% content_for(:body_attributes) do %>
+    data-no-turbolink="true"
+<% end %>
+
+<div class="grid">
+  <div class="gutter-sizer"></div>
+  <% @images = Dir.glob("app/assets/images/portfolio/*.{gif,jpg,png}")
+    @images.each do |image| %>
+    <div class="grid-item">
+    <%= image_tag image.gsub("app/assets/images/", ""), class: 'box-fit' %>
+    </div>
+   <% end %>
+</div>

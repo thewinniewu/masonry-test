@@ -1,0 +1,147 @@
+// Place all the styles related to the Page controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$side-padding: 130px;
+$main-color:  #666;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: $main-color;
+  font-weight: 300;
+}
+
+a {
+  color: #aaa;
+  text-decoration: none;
+  &:hover {
+    color: black;
+  }
+}
+
+.app-body {
+  margin: 3em $side-padding;
+}
+
+.top {
+  position: relative;
+  height: 200px;
+  padding: 80px $side-padding;
+  z-index: 1;
+}
+
+.menu {
+  min-height: 12em;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.menu--active {
+  display: block;
+}
+
+.menu--submenu {
+  padding-top: 10px !important;
+}
+
+.pure-menu-item {
+  &.menu--item {
+    position: relative;
+    font-size: 26px;
+    margin-right: 50px;
+    padding-left: 55px;
+  }
+  &.menu--subitem {
+    border-right: 3px solid $main-color;
+    padding-right: 15px;
+    text-align: right;
+  }
+}
+
+.name-title {
+  float: right;
+  text-transform: uppercase;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2em;
+  letter-spacing: 0.3em;
+  text-align: right;
+  a {
+    color: $main-color;
+  }
+}
+
+.box-fit {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.grid {
+  opacity: 0;
+  margin: auto;
+  transition: opacity .1s linear;
+
+  &.visible {
+    opacity: 1;
+  }
+}
+
+.gutter-sizer {
+  min-width: 2%;
+  max-width: 4.6%;
+}
+
+.grid-item {
+  width: 30%;
+  float: left;
+}
+
+@media screen and (max-width:1200px) {
+  .grid-item {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width:700px) {
+  .grid-item {
+    width: 100%;
+  }
+
+}
+
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/*
+.pure-menu-horizontal .pure-menu-list {
+  display: inline-flex;
+  width: 100%;
+  min-height: 12em;
+  text-transform: uppercase;
+}
+.pure-menu-item {
+  margin-right: .5em;
+  text-decoration: none;
+  font-size: 2em;
+}
+
+.pure-menu-children .pure-menu-item {
+  margin-left: 0;
+  text-transform: capitalize;
+  font-size: .75em;
+}
+.pure-menu-item-left {
+  text-align: right;
+  right: .5em ;
+}
+.pure-menu-item-separator {
+  flex-grow: 1;
+}
+*/
